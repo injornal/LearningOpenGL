@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5496C85C2BF66A6B00944E7D /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5496C85B2BF66A6B00944E7D /* libGLEW.2.2.0.dylib */; };
+		5496C85E2BF66A7C00944E7D /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5496C85D2BF66A7C00944E7D /* libglfw.3.4.dylib */; };
+		5496C8602BF66B7E00944E7D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5496C85F2BF66B7E00944E7D /* OpenGL.framework */; };
 		54EACBD62A78C31500D1D338 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54EACBD42A78C31500D1D338 /* main.cpp */; };
-		54F8883F2BECA34E00547A99 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F888302BEC9DA600547A99 /* OpenGL.framework */; };
-		54F888622BECAAE300547A99 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F888402BECA3AA00547A99 /* libglfw.3.4.dylib */; };
-		54F888642BECAAF400547A99 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F888632BECAAF400547A99 /* libGLEW.2.2.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,16 +27,11 @@
 
 /* Begin PBXFileReference section */
 		5471BB912BEDA87300E20397 /* sdf.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = sdf.shader; sourceTree = "<group>"; };
+		5496C85B2BF66A6B00944E7D /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		5496C85D2BF66A7C00944E7D /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
+		5496C85F2BF66B7E00944E7D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		54EACBCA2A788F2B00D1D338 /* playground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = playground; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EACBD42A78C31500D1D338 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		54F888302BEC9DA600547A99 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		54F888402BECA3AA00547A99 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
-		54F888582BECA9CD00547A99 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../../../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.a; sourceTree = "<group>"; };
-		54F8885A2BECA9DA00547A99 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw3.a; sourceTree = "<group>"; };
-		54F8885C2BECA9E300547A99 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		54F8885E2BECA9E900547A99 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		54F888602BECA9F900547A99 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		54F888632BECAAF400547A99 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F888642BECAAF400547A99 /* libGLEW.2.2.0.dylib in Frameworks */,
-				54F888622BECAAE300547A99 /* libglfw.3.4.dylib in Frameworks */,
-				54F8883F2BECA34E00547A99 /* OpenGL.framework in Frameworks */,
+				5496C8602BF66B7E00944E7D /* OpenGL.framework in Frameworks */,
+				5496C85E2BF66A7C00944E7D /* libglfw.3.4.dylib in Frameworks */,
+				5496C85C2BF66A6B00944E7D /* libGLEW.2.2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,14 +77,9 @@
 		54F8882F2BEC9DA600547A99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				54F888632BECAAF400547A99 /* libGLEW.2.2.0.dylib */,
-				54F888602BECA9F900547A99 /* Cocoa.framework */,
-				54F8885E2BECA9E900547A99 /* CoreVideo.framework */,
-				54F8885C2BECA9E300547A99 /* IOKit.framework */,
-				54F8885A2BECA9DA00547A99 /* libglfw3.a */,
-				54F888582BECA9CD00547A99 /* libGLEW.a */,
-				54F888402BECA3AA00547A99 /* libglfw.3.4.dylib */,
-				54F888302BEC9DA600547A99 /* OpenGL.framework */,
+				5496C85F2BF66B7E00944E7D /* OpenGL.framework */,
+				5496C85D2BF66A7C00944E7D /* libglfw.3.4.dylib */,
+				5496C85B2BF66A6B00944E7D /* libGLEW.2.2.0.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +111,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					54EACBC92A788F2B00D1D338 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -192,9 +182,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -253,9 +245,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -278,13 +272,16 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/glfw/3.4/include,
-					/opt/homebrew/Cellar/glew/2.2.0_1/include,
+					"/opt/homebrew/Cellar/glfw/3.4/include/**",
+					"/opt/homebrew/Cellar/glew/2.2.0_1/include/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/glfw/3.4/lib,
+					"/opt/homebrew/Cellar/glfw/3.4/lib/**",
+					"/opt/homebrew/Cellar/glew/2.2.0_1/lib/**",
 					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+					/opt/homebrew/Cellar/glfw/3.4/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -295,13 +292,16 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				HEADER_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/glfw/3.4/include,
-					/opt/homebrew/Cellar/glew/2.2.0_1/include,
+					"/opt/homebrew/Cellar/glfw/3.4/include/**",
+					"/opt/homebrew/Cellar/glew/2.2.0_1/include/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/Cellar/glfw/3.4/lib,
+					"/opt/homebrew/Cellar/glfw/3.4/lib/**",
+					"/opt/homebrew/Cellar/glew/2.2.0_1/lib/**",
 					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+					/opt/homebrew/Cellar/glfw/3.4/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

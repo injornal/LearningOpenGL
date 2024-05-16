@@ -11,15 +11,34 @@
  Fragment shaders -- for each pixel
 */
 
+#define GL_SILENCE_DEPRECATION
+#define GLFW_INCLUDE_GLCOREARB
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <assert.h>
 
-#define GL_SILENCE_DEPRECATION
-#define GLFW_INCLUDE_GLCOREARB
+
+
+#define glCall(x) glClearError(); x; assert(glLogCall(#x))
+
+static void glClearError()
+{
+    while(glGetError() != GL_NO_ERROR);
+}
+
+static bool glLogCall(const char* function)
+{
+    while(GLenum error = glGetError()) {
+        std::cout << "[OpenGL] Error(" << error << ") " << function << std::endl; // << function << " " << file << "line: " << line << std::endl;
+        return false;
+    }
+    return true;
+}
 
 
 static unsigned int compileShader(unsigned int type, const std::string& sourse)
@@ -106,6 +125,7 @@ static shaderProgramSource parseShader(const std::string& filepath)
 
 int main(void)
 {
+    assert(true);
     GLFWwindow* window;
 
     /* Initialize GLFW */
@@ -203,7 +223,7 @@ int main(void)
         
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
         
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+        glCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
         
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
