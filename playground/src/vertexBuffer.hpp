@@ -10,7 +10,7 @@
 class VertexBuffer 
 {
 private:
-    unsigned int rendererId;
+    unsigned int ID;
 public:
     VertexBuffer(const void* data, unsigned int size);
     ~VertexBuffer();

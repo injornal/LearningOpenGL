@@ -9,11 +9,15 @@ void main() {
 
 #shader fragment
 #version 330 core
+
 in vec4 position_out;
 out vec3 color;
+
+uniform vec4 uColor;
+
 void main() {
    vec3 circle = vec3(.5, .5, .3);
    float dist = length(position_out.xy - circle.xy) - circle.z;
-   color = dist > 0 ? vec3(0, 1, 1) : vec3(1, 1, 0);
+   color = dist > 0 ? vec3(0, uColor.gb) : vec3(uColor.rg, 0);
    color = color * (1. - exp(-4.0 * abs(dist)));
 }
