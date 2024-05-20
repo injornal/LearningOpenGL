@@ -6,7 +6,8 @@
 //
 
 #include "indexBuffer.hpp"
-#include "renderer.hpp"
+#include "errorHandler.hpp"
+#include <GL/glew.h>
 
 IndexBuffer::IndexBuffer(const void* data, unsigned int count) : count(count)
 {

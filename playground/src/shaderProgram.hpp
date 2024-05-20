@@ -9,20 +9,20 @@
 #include <string>
 #include <unordered_map>
 
-struct shaderProgramSource
+struct ShaderProgramSource
 {
     std::string vertexSource;
     std::string fragmentSource;
 };
 
-class shaderProgram
+class ShaderProgram
 {
 private:
     unsigned int ID;
     std::unordered_map<std::string, int> uniformLocationCache;
 public:
-    shaderProgram(const std::string& filepath);
-    ~shaderProgram();
+    ShaderProgram(const std::string& filepath);
+    ~ShaderProgram();
     
     void bind() const;
     void unbind() const;
@@ -31,6 +31,6 @@ public:
 private:
     unsigned int compileShader(unsigned int type, const std::string& sourse);
     unsigned int createShader(const std::string& vertexShader, const std::string& fragmentShader);
-    shaderProgramSource parseShader(const std::string& filepath);
+    ShaderProgramSource parseShader(const std::string& filepath);
     int getUniformLocation(const std::string& name);
 };

@@ -8,7 +8,8 @@
 #pragma once
 #include <vector>
 #include <assert.h>
-#include "renderer.hpp"
+#include "errorHandler.hpp"
+#include <GL/glew.h>
 
 struct VertexBufferElement
 {

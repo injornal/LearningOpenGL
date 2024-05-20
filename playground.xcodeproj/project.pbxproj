@@ -16,6 +16,7 @@
 		5496C8742BF6780700944E7D /* vertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5496C8722BF6780700944E7D /* vertexArray.cpp */; };
 		5496C8772BF67B6100944E7D /* vertexBufferLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5496C8752BF67B6100944E7D /* vertexBufferLayout.cpp */; };
 		5496C87A2BF6E86900944E7D /* shaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5496C8782BF6E86900944E7D /* shaderProgram.cpp */; };
+		5496C8802BFAF09C00944E7D /* errorHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5496C87E2BFAF09C00944E7D /* errorHandler.cpp */; };
 		54EACBD62A78C31500D1D338 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54EACBD42A78C31500D1D338 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		5496C8762BF67B6100944E7D /* vertexBufferLayout.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertexBufferLayout.hpp; sourceTree = "<group>"; };
 		5496C8782BF6E86900944E7D /* shaderProgram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shaderProgram.cpp; sourceTree = "<group>"; };
 		5496C8792BF6E86900944E7D /* shaderProgram.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shaderProgram.hpp; sourceTree = "<group>"; };
+		5496C87E2BFAF09C00944E7D /* errorHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = errorHandler.cpp; sourceTree = "<group>"; };
+		5496C87F2BFAF09C00944E7D /* errorHandler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = errorHandler.hpp; sourceTree = "<group>"; };
 		54EACBCA2A788F2B00D1D338 /* playground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = playground; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EACBD42A78C31500D1D338 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +77,8 @@
 				5496C86A2BF66D3400944E7D /* renderer.hpp */,
 				5496C8782BF6E86900944E7D /* shaderProgram.cpp */,
 				5496C8792BF6E86900944E7D /* shaderProgram.hpp */,
+				5496C87E2BFAF09C00944E7D /* errorHandler.cpp */,
+				5496C87F2BFAF09C00944E7D /* errorHandler.hpp */,
 				5496C8722BF6780700944E7D /* vertexArray.cpp */,
 				5496C8732BF6780700944E7D /* vertexArray.hpp */,
 				5496C8752BF67B6100944E7D /* vertexBufferLayout.cpp */,
@@ -196,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5496C87A2BF6E86900944E7D /* shaderProgram.cpp in Sources */,
+				5496C8802BFAF09C00944E7D /* errorHandler.cpp in Sources */,
 				5496C86E2BF66F7100944E7D /* vertexBuffer.cpp in Sources */,
 				5496C8772BF67B6100944E7D /* vertexBufferLayout.cpp in Sources */,
 				5496C86B2BF66D3400944E7D /* renderer.cpp in Sources */,

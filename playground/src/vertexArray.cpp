@@ -6,7 +6,8 @@
 //
 
 #include "vertexArray.hpp"
-#include "renderer.hpp"
+#include "errorHandler.hpp"
+#include <GL/glew.h>
 
 VertexArray::VertexArray()
 {

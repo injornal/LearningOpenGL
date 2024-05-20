@@ -9,10 +9,13 @@
 
 #include <GL/glew.h>
 #include <assert.h>
+#include "vertexArray.hpp"
+#include "indexBuffer.hpp"
+#include "shaderProgram.hpp"
 
-#define glCall(x) glClearError(); x; assert(glLogCall(#x))
-
-void glClearError();
-
-bool glLogCall(const char* function);
-
+class Renderer
+{
+public:
+    void draw(const VertexArray& VAO, const IndexBuffer& IBO, ShaderProgram& shader);
+    inline void clear() const {glCall(glClear(GL_COLOR_BUFFER_BIT));}
+};;

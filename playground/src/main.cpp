@@ -27,6 +27,7 @@
 #include "indexBuffer.hpp"
 #include "vertexArray.hpp"
 #include "shaderProgram.hpp"
+#include "errorHandler.hpp"
 
 
 
@@ -96,7 +97,9 @@ int main(void)
     
     IndexBuffer IBO(indices, sizeof(indices) / sizeof(unsigned int));
 
-    shaderProgram shaderProgram("res/shaders/sdf.shader");
+    ShaderProgram shaderProgram("res/shaders/sdf.shader");
+    
+    Renderer renderer;
     
     VAO.unbind();
     shaderProgram.unbind();
@@ -107,18 +110,13 @@ int main(void)
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
-        
+        renderer.clear();
         
         /* Draw call */
         shaderProgram.bind();
-        VAO.bind();
-        IBO.bind();
-        
         shaderProgram.setUniform4f("uColor", 1, 1, 1, 1);
         
-//        glCall(glDrawElements(GL_TRIANGLES, 6, GL_INT, nullptr)); // USE FOR EXCEPTIONS
-        glCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
+        renderer.draw(VAO, IBO, shaderProgram);
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);

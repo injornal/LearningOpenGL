@@ -6,12 +6,14 @@
 //
 
 #include "shaderProgram.hpp"
-#include "renderer.hpp"
+#include <GL/glew.h>
+
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include "errorHandler.hpp"
 
-unsigned int shaderProgram::compileShader(unsigned int type, const std::string& sourse)
+unsigned int ShaderProgram::compileShader(unsigned int type, const std::string& sourse)
 {
     unsigned int id = glCreateShader(type);
     const char* src = sourse.c_str();
@@ -35,7 +37,7 @@ unsigned int shaderProgram::compileShader(unsigned int type, const std::string& 
     return id;
 }
 
-unsigned int shaderProgram::createShader(const std::string& vertexShader, const std::string& fragmentShader)
+unsigned int ShaderProgram::createShader(const std::string& vertexShader, const std::string& fragmentShader)
 {
     unsigned int program = glCreateProgram();
     unsigned int vs = compileShader(GL_VERTEX_SHADER, vertexShader);
@@ -52,7 +54,7 @@ unsigned int shaderProgram::createShader(const std::string& vertexShader, const 
     return program;
 }
 
-shaderProgramSource shaderProgram::parseShader(const std::string& filepath)
+ShaderProgramSource ShaderProgram::parseShader(const std::string& filepath)
 {
     std::ifstream stream(filepath);
     
@@ -87,33 +89,33 @@ shaderProgramSource shaderProgram::parseShader(const std::string& filepath)
     return {ss[0].str(), ss[1].str()};
 }
 
-shaderProgram::shaderProgram(const std::string& filepath)
+ShaderProgram::ShaderProgram(const std::string& filepath)
 {
-    shaderProgramSource shaders = parseShader("res/shaders/sdf.shader");
+    ShaderProgramSource shaders = parseShader("res/shaders/sdf.shader");
     this->ID = createShader(shaders.vertexSource, shaders.fragmentSource);
 }
 
-shaderProgram::~shaderProgram()
+ShaderProgram::~ShaderProgram()
 {
     glCall(glDeleteProgram(ID));
 }
 
-void shaderProgram::bind() const
+void ShaderProgram::bind() const
 {
     glCall(glUseProgram(ID));
 }
 
-void shaderProgram::unbind() const
+void ShaderProgram::unbind() const
 {
     glCall(glUseProgram(0));
 }
 
-void shaderProgram::setUniform4f(const std::string &name, float v1, float v2, float v3, float v4)
+void ShaderProgram::setUniform4f(const std::string &name, float v1, float v2, float v3, float v4)
 {
     glCall(glUniform4f(this->getUniformLocation(name), v1, v2, v3, v4));
 }
 
-int shaderProgram::getUniformLocation(const std::string& name)
+int ShaderProgram::getUniformLocation(const std::string& name)
 {
     if(this->uniformLocationCache.find(name) != this->uniformLocationCache.end())
     {
