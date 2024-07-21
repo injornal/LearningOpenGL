@@ -32,3 +32,9 @@ void VertexBuffer::unbind() const
     
     glCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
 }
+
+void VertexBuffer::bufferData(const void* data, unsigned int size)
+{
+    this->bind();
+    glCall(glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW));
+}

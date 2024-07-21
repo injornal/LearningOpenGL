@@ -28,6 +28,7 @@ public:
     void unbind() const;
     
     void setUniform4f(const std::string& name, float v1, float v2, float v3, float v4);
+    void setUniform1f(const std::string& name, float v1);
 private:
     unsigned int compileShader(unsigned int type, const std::string& sourse);
     unsigned int createShader(const std::string& vertexShader, const std::string& fragmentShader);

@@ -17,4 +17,6 @@ public:
     
     void bind() const;
     void unbind() const;
+    
+    void bufferData(const void* data, unsigned int size);
 };

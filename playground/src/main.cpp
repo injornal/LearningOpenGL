@@ -48,7 +48,7 @@ int main(void)
 #endif
     
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(720, 720, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(720, 720, "", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -75,10 +75,10 @@ int main(void)
     
     
     float vertices[] = {
-        -0.5f, -0.5f,
-        0.5f, -0.5f,
-        0.5f,  0.5f,
-        -0.5f, 0.5f
+        -0.5f, -0.5f, 0,
+        0.5f, -0.5f, 0,
+        0.5f,  0.5f, 0,
+        -0.5f, 0.5f, 0
     };
     
     unsigned int indices[] = {
@@ -92,7 +92,7 @@ int main(void)
     VertexBuffer VBO(vertices, sizeof(vertices));
     
     VertexBufferLayout layout;
-    layout.push<float>(2);
+    layout.push<float>(3);
     VAO.addBuffer(VBO, layout);
     
     IndexBuffer IBO(indices, sizeof(indices) / sizeof(unsigned int));
@@ -106,6 +106,7 @@ int main(void)
     VBO.unbind();
     IBO.unbind();
 
+    int ang = 0;
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
@@ -116,6 +117,8 @@ int main(void)
         shaderProgram.bind();
         shaderProgram.setUniform4f("uColor", 1, 1, 1, 1);
         
+        ang += 1;
+        shaderProgram.setUniform1f("rotAngle", ang);
         renderer.draw(VAO, IBO, shaderProgram);
 
         /* Swap front and back buffers */
